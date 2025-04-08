@@ -1,0 +1,174 @@
+* {
+    font-family: "Oswald";
+    cursor: default;
+  }
+  
+  a {
+    cursor: pointer;
+  }
+  
+  @media (min-width: 768px) {
+    nav {
+      width: auto;
+      text-align: left;
+    }
+  }
+  
+  body {
+    display: flex;
+    background: rgb(201, 192, 192);
+    color: black;  
+  }
+
+  .nav_header {
+    height: 90px;
+  }
+
+  .main_header {
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+  }
+  
+  #navbar {
+    padding-right: 15px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+   .nav-list li{
+    margin-bottom: 30px; 
+    border: solid darkgray 1px;
+    width: 150px;
+  }
+  
+  .main-doc {
+    border-left: solid 1px white;
+  }
+  
+  
+  .html-container, .sub {
+    background-color: lightgray;
+    border: solid 1px;
+    overflow: auto;
+    width: 500px;
+    margin: 45px;
+    margin-bottom: 10px;
+  }
+   
+  .html-container2 {
+    background-color: lightgray;
+    border: solid 1px;
+    overflow: auto;
+    width: 800px;
+    margin: 45px;
+    margin-bottom: 10px;
+  }
+  
+  .html-container3 {
+    background-color: lightgray;
+    border: solid 1px;
+    overflow: auto;
+    width: 400px;
+    margin: 45px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .html-container4 {
+    background-color: lightgray;
+    border: solid 1px;
+    overflow: auto;
+    width: 510px;
+    margin: 45px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .table_example, .styling_form {
+    background-color: lightgray;
+    border: solid 1px;
+    overflow: auto;
+    width: 510px;
+    margin: 45px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  .form_example {
+  background-color: lightgray;
+    border: solid 1px;
+    overflow: auto;
+    width: 300px;
+    margin: 45px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+  }
+  .input_example {
+     background-color: lightgray;
+    border: solid 1px;
+    overflow: auto;
+    width: 510px;
+    height: 520px;
+    margin: 45px;
+    padding-left: 20px;
+    padding-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .html5_valid {
+    background-color: lightgray;
+    border: solid 1px;
+    overflow: auto;
+    width: 400px;
+    height: 300px;
+    margin: 45px;
+    padding-bottom: 1px;
+    margin-bottom: 5px;
+  }
+  
+  .access_form {
+    background-color: lightgray;
+    border: solid 1px;
+    overflow: auto;
+    width: 600px;
+    height: 300px;
+    margin: 45px;
+    margin-bottom: 10px;
+  
+  }
+  
+  
+  .doctype {
+    color: #007acc; /* Blue */
+  }
+  
+  .html-tag {
+    color: #800080; /* Purple */
+  }
+  
+  .head-tag {
+    color: #ff6347; /* Tomato Red */
+  }
+  
+  .meta-tag {
+    color: #32cd32; /* Lime Green */
+  }
+  
+  .title-tag {
+    color: #ff69b4; /* Hot Pink */
+  }
+  
+  .body-tag {
+    color: #ff8c00; /* Dark Orange */
+  }
+  
+  .comment {
+    color: #808080; /* Grey */
+  }

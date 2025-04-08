@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Technical Documentation Page</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <aside>
+    <nav id="navbar">
+      <ul class="nav-list">
+        <header class="nav_header"></header>
+        <li> <a href="#Introduction" class="nav-link">Introduction</a></li>
+
+        <li> <a href="#HTML_Structure" class="nav-link">HTML Structure</a></li>
+
+        <li> <a href="#Text_Tags" class="nav-link">Text Tags</a></li>
+
+        <li> <a href="#Lists" class="nav-link">Lists</a></li>
+
+        <li> <a href="#Links_&_Images" class="nav-link">Links & Images</a></li>
+
+        <li> <a href="#Tables" class="nav-link">Tables</a></li>
+
+        <li> <a href="#Forms" class="nav-link">Forms</a></li>
+
+        <li> <a href="#Semantic_HTML_Elements" class="nav-link">Semantic HTML Elements</a></li>
+
+      <li> <a href="#Conclusion" class="nav-link">Conclusion</a></li>
+
+      </ul>
+    </nav>
+  </aside>
+
+
+  <main id="main-doc">
+    <header class="main_header">A Guide to Basic HTML</header>
+    <section class="main-section" id="Introduction">
+      <header><h1>Introduction</h1></header>
+      <p>HTML (Hypertext Markup Language) is the backbone of web pages. It's the language used to structure everything you see on a website—like text, images, links, and more. Basically, HTML tells your web browser how to display content. Think of it as the skeleton of a webpage, with all the content fitting into place like pieces of a puzzle.
+
+If you're new to web development, HTML is where you start. In this guide, we'll go over the basics of HTML tags and elements, so you can start building your own web pages and get a feel for how everything works.</p>
+    </section>
+
+    <section class="main-section" id="HTML_Structure">
+            <header><h1>HTML Structure</h1></header>
+            <p>Every HTML document has a basic structure that all web pages follow. It’s like the framework that holds everything together. When you open up a webpage, what you’re really looking at is a combination of HTML elements that tell the browser how to arrange and display the content.
+
+Here’s what a typical HTML document looks like:</p>
+
+            <div class="html-container">
+              <pre><code>
+  <span class="doctype">&lt;!DOCTYPE html&gt;</span>
+  <span class="html-tag">&lt;html lang="en"&gt;</span>
+    <span class="head-tag">&lt;head&gt;</span>
+      <span class="meta-tag">&lt;meta charset="UTF-8" /&gt;</span>
+      <span class="meta-tag">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</span>
+      <span class="title-tag">&lt;title&gt;Document Title&lt;/title&gt;</span>
+    <span class="head-tag">&lt;/head&gt;</span>
+    <span class="body-tag">&lt;body&gt;</span>
+      <span class="comment">&lt;!-- Content goes here --&gt;</span>
+    <span class="body-tag">&lt;/body&gt;</span>
+  <span class="html-tag">&lt;/html&gt;</span>
+</code></pre>
+            </div>
+            <ul class="html-list">
+              <li>&lt;!DOCTYPE html&gt; : This tells the browser that the document is an HTML5 document.</li>
+              <li> &lt;html&gt : This is the root element that wraps everything in the document.</li>
+              <li> &lthead&gt; :  Inside this tag, you put things like the page title, meta information, and links to stylesheets or scripts.</li>
+              <li> &ltbody&gt; : This is where all the visible content (like text, images, and links) goes.</li>
+          </ul>
+        <p>It might seem simple at first, but this basic structure is the foundation of everything you’ll build on when working with HTML.
+
+</p>
+
+    </section>
+
+    <section class="main-section" id="Text_Tags">
+            <header><h1>Text Tags</h1></header>
+            <p>HTML has different text-related tags that help structure content and make it more readable. Whether you’re adding a heading, making something bold, or organizing paragraphs, text tags help format everything properly.</p>
+            <p>Here are some of the most commonly used text tags: </p>
+              <ul class="html-list">
+              <li>&lth1&gt; to &lth6&gt; - These are heading tags, where &lth1&gt; is the biggest (main heading) and &lth6&gt is the smallest.</li>
+              <li> &ltp&gt - This stands for "paragraph" and is used to create blocks of text.</li>
+              <li> &ltb&gt; and &ltstrong&gt; - Both make text bold, but &ltstrong&gt; also adds importance to the content.</li>
+
+              <li> &lti&gt; and &ltemgt; - These make text italic, but <em> emphasizes it more.</em></li>
+
+              <li> &ltu&gt; - <u>Underlines</u> text.</li>
+
+              <li> &ltbr&gt; - Adds a line break (moves text to a new line without creating a new paragraph).</li>
+
+              <li> &lthr&gt; - Creates a horizontal line to visually separate content.</li>
+
+              <li> &ltmark&gt; - <mark>Highlights</mark> text (usually in yellow by default).</li>
+          </ul>
+            <div class="html-container2">
+              
+              <pre><code>
+            &lt;h1&gt;This is a Heading&lt;/h1&gt;
+            &lt;p&gt;This is a paragraph. &lt;strong&gt;Bold text&lt;/strong&gt;, &lt;em&gt;italic text&lt;/em&gt;, and &lt;mark&gt;highlighted text&lt;/mark&gt; can be added.&lt;/p&gt;
+            </code></pre>
+            </div>
+            <p>These tags make it easier to structure your content properly. Want to see them in action? Try them out! 😊</p>
+    </section>
+
+    <section class="main-section" id="Lists">
+            <header><h1>Lists</h1></header>
+            <p>When you're organizing information on a webpage, sometimes you want to display it in a list format. HTML has two main types of lists: <strong>ordered lists</strong> and <strong>unordered lists</strong>.</p>
+            <p><strong>Ordered Lists (&ltol&gt;)</strong><p/>
+            <p>An ordered list is great when the order of the items matters—like when you’re giving step-by-step instructions or ranking things. You use numbers or letters to indicate the order.</p>
+
+            <p>Example:</p>
+
+<div class="lists_example">
+<ol>
+  <li>Preheat the oven to 350°F.</li>
+  <li>Mix the ingredients together.</li>
+  <li>Bake for 20 minutes.</li>
+</ol>
+</div>
+            <p>This will display the steps in numerical order.</p>
+
+
+            <p><strong>Unordered Lists (&ltul&gt;)</strong></p>
+            <p>If the order doesn’t matter, you can use an unordered list. Items in these lists are marked with bullet points by default, which makes them perfect for lists of things like ingredients, features, or any other unordered items.</p>
+
+            <p class="example1_p">Example:</p>
+
+<div class="lists_example">
+  <ul class="example_ul">
+  <li>Flour</li>
+  <li>Sugar</li>
+  <li>Eggs</li>
+</ul>
+</div>         
+<p>This will show a bulleted list of ingredients.</p>
+
+            <p><strong>List Items(&ltli&gt;)</strong></p>
+            <p>Inside both ordered and unordered lists, you use the &ltli&gt; tag to define each item in the list. That’s the basic building block of both types of lists.</p>
+    </section>
+
+
+
+
+    <section class="main-section" id="Links_&_Images">
+            <header><h1>Links & Images</h1></header>
+            <p>In HTML, you can link to other pages or resources using the &lta&gt; tag, and you can add images to your webpage with the &ltimg&gt; tag.</p>
+            <p><strong>Links</strong></p>
+            <p>To create a link to another webpage or resource, use the &lta&gt; tag. The href attribute specifies the destination URL.</p>
+            <p>Example:</p>
+                        <div class="html-container3">
+                          <pre><code>&lta&gt; href="https://www.example.com">Click Here&lt;/a&gt;</pre></code>
+                        </div>
+            <p>This creates a clickable link that takes the user to https://www.example.com.
+
+You can also link to different sections of the same page using anchor links. For example:</p>
+                <div class="html-container3">
+                          <pre><code>&lta&gt;href="#Introduction">Go to Introduction&lt;/a&gt;</pre></code>
+                        </div>
+
+
+
+
+
+            <p><strong>Images</strong></p>
+            <p>To add an image to a webpage, use the &ltimg&gt; tag. The src attribute specifies the path to the image file, and the alt attribute provides alternative text if the image is unavailable.</p>
+            <p>Example:</p>
+            <div class="html-container3">
+                          <pre><code>&ltimg&gt; src="image.jpg" alt="Description of Image"&lt;/img&gt;</pre></code>
+                        </div>
+            <p>This adds an image called <strong>image.jpg</strong> and provides a description in case the image is not displayed.
+
+You can also set the image's width and height using the width and height attributes:</p>
+             <div class="html-container4">
+                          <pre><code>&ltimg&gt;img src="image.jpg" alt="Description of Image" width="500" height="300"&lt;/img&gt;</pre></code>
+                        </div>
+        </section>
+
+
+
+
+        <section class="main-section" id="Tables">
+            <header><h1>Tables</h1></header>
+            <p>To create tables in HTML, you use a set of tags to define the structure of the table. Here's a simple breakdown of the key elements:</p>
+            <p><strong>Key Tags for Tables:
+</strong></p>
+            <ul>
+              <li>&lttable&gt;: Defines the table.</li>
+              <li>&lttr&gt;: Defines a table row.</li>
+              <li>&ltth&gt;: Defines a table header cell (bold and centered by default).</li>
+              <li>&lttd&gt;: Defines a table data (cell).
+</li>
+              <li>&ltthead&gt;: Groups the header content of a table.</li>
+              <li>&lttbody&gt;: Groups the body content of a table.</li>
+              <li>&lttfoot&gt;: Groups the footer content of a table.</li>
+            </ul>
+            <p><strong>Simple Table Example:</strong></p>
+            <pre class="table_example"><code>
+  &lttable&gt;
+    &ltthead&gt;
+      &lttr&gt;
+        &ltth&gt;Name&lt;/th&gt;
+        &ltth&gt;Age&lt;/th&gt;
+        &ltth&gt;City&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lttbody&gt;
+      &lttr&gt;
+        &lttd&gt;John&lt;/td&gt;
+        &lttd&gt;25&lt;/td&gt;
+        &lttd&gt;New York&lt;/td&gt;
+      &lt;/tr&gt;
+      &lttr&gt;
+        &lttd&gt;Alice&lt;/td&gt;
+        &lttd&gt;30&lt;/td&gt;
+        &lttd&gt;Los Angeles&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lttfoot&gt;
+      &lttr&gt;
+        &lttd colspan="3"&gt;Table footer&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tfoot&gt;
+  &lt;/table&gt;
+            </code></pre>
+            <p><strong>Breakdown:
+</strong></p>
+              <ul class="breakdown_table">
+                <li>The &ltthead&gt; contains the header row (&lttr&gt;) and header cells (&ltth&gt;).</li>
+                <li>The &lttbody&gt; holds the data rows (&lttr&gt;) and data cells (&lttd&gt;).</li>
+                <li>The &lttfoot&gt; can be used for footer content, typically for summaries or other additional information.</li>
+              </ul>
+            <p><strong>Styling Tips:</strong></p>
+              <ul class="styling_table">
+                <li>You can use CSS to style tables, such as adding borders, padding, and controlling the width of columns.</li>
+                <li>If you want the table to be more readable, consider adding border-collapse in CSS to remove extra space between table cells.</li>
+              </ul>
+    </section>
+
+        <section class="main-section" id="Forms">
+            <header><h1>Forms</h1></header>
+            <p>Forms are essential for collecting data from users and submitting it to a server for processing. This section covers the different types of forms, their elements, and how to handle form submission.</p>
+            <p><strong>1. Basic Form Structure</strong></p>
+            <p>A basic form is created using the <form> tag. The &ltform&gt; element wraps the entire form and allows you to define its action (where the data is sent) and the method (how the data is sent).
+</p>
+           <p>Example:</p>
+           <div class = "form_example"><pre><code>
+             &ltform action="/submit" method="POST"&gt;
+                &lt!-- Form elements go here --&gt;
+              &lt;/form&gt;
+
+            </code></pre> </div>
+            <ul>
+              <li>action: Specifies the URL where the form data is submitted.</li>
+              <li>method: Defines how data is sent (GET or POST).</li>
+            </ul>
+            <p><strong>2. Form Elements</strong></p>
+            <p>Forms include a variety of elements for gathering different types of input. The most common form elements are:</p>
+            <ul>
+              <li><strong>Text Input Fields: </strong>For short, single-line input.</li>
+              <li><strong>Text Area:</strong>For multi-line text input.</li>
+              <li><strong>Radio Buttons:</strong>For selecting one option from a group.</li>
+              <li><strong>Checkboxes:</strong>Checkboxes: For selecting multiple options.</li>
+              <li><strong>Dropdown Lists:</strong>For selecting one or more options from a dropdown.</li>
+              <li><strong>Submit Button:</strong>To submit the form.</li>
+            </ul>
+            <p>Example of Various Input Types:</p>
+            <div class="input_example">
+              <pre><code>
+                <form action="/submit" method="POST">
+                  &ltlabel for="username"&gt;Username:&lt;/label&gt;
+                  &ltinput type="text" id="username" name="username" required&gt;
+
+                  &ltlabel for="email">Email:&lt;/label&gt;
+                  &ltinput type="email" id="email" name="email" required&gt;
+
+                  &ltlabel for="feedback"&gt;Feedback:&lt;/label&gt;
+                  &lttextarea id="feedback" name="feedback" rows="4" required&gt;&lt;/textarea&gt;
+
+                  &ltlabel for="subscribe"&gt;
+                    &ltinput type="checkbox" id="subscribe" name="subscribe"&gt;
+                    Subscribe to newsletter
+                  &lt;/label&gt;
+
+                  &ltbutton type="submit"&gt;Submit&lt;/button&gt;
+                &lt;/form&gt;
+              
+              </code></pre>
+            </div>
+
+
+            <p><strong>3. Form Validation</strong></p>
+            <p>Form validation ensures that the user inputs the correct data before submitting the form. You can use the required attribute or JavaScript to perform validation.</p>
+            <p>Example: HTML5 Validation</p>
+            <div class="html5_valid">
+              <pre><code>
+                &ltform action="/submit" method="POST"&gt;
+                  &ltlabel for="email"&gt;Email:&lt;/label&gt;
+                  &ltinput type="email" id="email" name="email" required&gt;
+
+                  &ltbutton type="submit"&gt;Submit&lt;/button&gt;
+                &lt;/form&gt;
+                
+              
+              </code></pre>
+            </div>
+            <ul>
+              <li>required: Makes the field mandatory.</li>
+              <li>type="email": Ensures the email address entered is in the correct format.</li>
+            </ul>
+            <p><strong>4. Handling Submission</strong></p>
+            <p>The form’s action attribute determines where the form data is sent when submitted. The method attribute defines how the data is sent (GET or POST).</p>
+            <ul>
+              <li><strong>POST Method:</strong> Used for submitting sensitive data like login credentials, registration forms, or comments.</li>
+              <li><strong>GET Method:</strong> Typically used for forms that don't modify data (e.g., search forms).</li>
+            </ul>
+            <div class="sub">
+              <pre><code>
+                &lt?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                  // Collect form data
+                  $username = $_POST['username'];
+                  $email = $_POST['email'];
+    
+                  // Process the data
+                  // For example, save the data to a database or send an email
+                }
+                ?&gt;
+              </code></pre>
+            </div>
+            
+            <p><strong>5. Styling Forms</strong></p>
+            <p>You can use CSS to style the form elements, making them more user-friendly and visually appealing.</p>
+            <p>Example: Styling a Form</p>
+            <div class="styling_form">
+              <pre><code>
+                form {
+                  max-width: 600px;
+                  margin: auto;
+                  padding: 20px;
+                  background-color: #f9f9f9;
+                  border-radius: 8px;
+                }
+
+                label {
+                  display: block;
+                  margin-bottom: 8px;
+                }
+
+                input, textarea {
+                  width: 100%;
+                  padding: 10px;
+                  margin-bottom: 10px;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                }
+
+                button {
+                  background-color: #4CAF50;
+                  color: white;
+                  padding: 10px 20px;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+                }
+
+                button:hover {
+                  background-color: #45a049;
+                }
+
+              </code></pre>
+            </div>
+            <p><strong>6. Storm Accessibility</strong></p>
+            <p>To ensure your forms are accessible to all users, including those using screen readers, make sure to:</p> 
+              <ul>
+                <li>Use proper form labels.</li>
+                <li>Group related inputs together.</li>
+                <li>Provide clear instructions when needed.</li>
+              </ul>
+            <p>Example of Accessible Form:</p>
+            <div class="access_form">
+              <pre><code>
+                &ltform action="/submit" method="POST"&gt;
+                  &ltlabel for="username"&gt;Username:&lt;/label&gt;
+                  &ltinput type="text" id="username" name="username" aria-required="true" required&gt;
+
+                  &ltlabel for="email"&gt;Email:&lt;/label&gt;
+                  &ltinput type="email" id="email" name="email" aria-required="true" required&gt;
+
+                  &ltbutton type="submit"&gt;Submit&lt;/button&gt;
+                &lt;/form&gt;
+              </pre></code>
+            </div>
+            <ul>
+              <li>aria-required="true" tells screen readers that this field is required.</li>
+            </ul>
+            <p><strong>Conclusion</strong></p>
+            <p>Forms are a critical part of any website, allowing users to submit information. By understanding the basics of form structure, validation, handling submission, and styling, you can create effective and accessible forms for your website.</p>
+    </section>
+
+        <section class="main-section" id="Semantic_HTML_Elements">
+            <header><h1>Semantic HTML Elements</h1></header>
+            <p>Semantics in HTML refers to the use of HTML elements that have clear, descriptive meaning about the content they contain. Using semantic elements improves accessibility, search engine optimization (SEO), and code maintainability</p>
+          <p>Why use Semantics?</p>
+          <ul>
+            <li>Helps screen readers and assistive tech</li>
+            <li>Boosts search engine visibility</li>
+            <li>Makes code easier to maintain</li>
+          </ul>
+          <p><strong>Common Semantic Elements</strong></p>
+          <ul>
+            <li>&ltheader&gt;: top section of a page or section, often includes logo and nav links.</li>
+            <li>&ltfooter&gt;: Bottom section with contact, copyright, or related links.</li>
+            <li>&ltnav&gt;: Block of site navigation links.</li>
+            <li>&ltmain&gt;: Main content unique to the page.</li>
+            <li>&ltsection&gt;: Groups related content, usually with a heading.</li>
+            <li>&ltarticle&gt;: Independent, self-contained content like blog posts.</li>
+            <li>&ltaside&gt;: Tangential content like sidebars or related links.</li>
+            <li>&ltfigure&gt/&ltfigcaption&gt;: Media with a caption.</li>
+            </ul>
+
+            <p><strong>Non-Semantic (Use Sparingly)</strong></p>
+              <ul>
+                <li>&ltdiv&gt;: Generic block</li>
+                <li>&ltspan&gt;: Generic inline</li>
+                <p>Use only when no semantic alternative fits</p>
+
+    </section>
+
+        <section class="main-section" id="Conclusion">
+            <header><h1>Conclusion</h1></header>
+            <p>HTML is the foundation of every webpage. By learning and using basic HTML tags—like headings, paragraphs, lists, links, images, tables, forms, and semantic elements—you can structure content effectively and build clean, accessible websites.</p>
+
+<p>This guide covered the essential tags to get you started. As you continue learning, practice writing and experimenting with HTML to deepen your understanding and improve your skills.</p>
+
+<p>Happy coding! 🧠💻</p>
+
+
+
+    </section>
+  </main>
+
+
+    
+</body>
+
+
+
+
+
+</html>
